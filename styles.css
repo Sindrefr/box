@@ -5,10 +5,25 @@
     transform: translate(-50%, -50%);
     width: 100px;
     height: 100px;
-    background-color: red;
+    background-color: rgb(4, 0, 255);
   }
   
   #firkant p {
+    text-align: center;
+    color: white;
+  }
+
+  #FIENDE {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-color: red;
+  }
+
+  #FIENDE p{
     text-align: center;
     color: white;
   }
@@ -18,5 +33,9 @@
     position: fixed;
     top: 10px;
     right: 10px;
+  }
+
+  .poenga {
+    text-align: center;
   }
   
