@@ -77,9 +77,9 @@ function bevegRandom() {
   
  } 
   function poengDa(){
-  // Sjekker om du har kollidert
+  // Sjekker om du har kollidert med fienden
   if (posX + firkant.offsetWidth > posX2 && posX < posX2 + fiende.offsetWidth && posY + firkant.offsetHeight > posY2 && posY < posY2 + fiende.offsetHeight) {
-    // Trekker fra 10 poeng for hver overlapp
+    // Trekker fra 10 poeng for hvert sekund med kollisjon
     poeng -= 10;
   } else {
     // Legger til et poeng for hvert sekund uten kollisjon
@@ -103,7 +103,7 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
-//Funksjon som vokser firkanten i bredde og høyde
+//Funksjon som vokser fienden i bredde og høyde
 function vokseFirkant() {
   firkantBredde *= 1.1;
   firkantHoyde *= 1.1;
@@ -112,6 +112,6 @@ function vokseFirkant() {
 }
 
 setInterval(vokseFirkant, 60 * 1000); // Kaller funksjonen vokseFirkant en gang i minuttet
-setInterval(bevegRandom, 100); // Kaller funksjonen bevegRandom for å flytte fienden hvert tiendedelsekund
+setInterval(bevegRandom, 100); // Kaller funksjonen bevegRandom for å flytte fienden og justerer hastigheten
 setInterval(poengDa, 1000); // Kaller funksjonen poengDa hvert sekund for å oppdatere poengene
 
